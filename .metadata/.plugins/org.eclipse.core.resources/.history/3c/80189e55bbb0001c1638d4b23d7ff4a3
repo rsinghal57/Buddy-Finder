@@ -1,0 +1,65 @@
+package com.example.demo.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Buddy;
+import com.example.demo.repository.BuddyRepository;
+import com.example.demo.service.BuddyService;
+
+@Service
+public class BuddyServiceImpl implements BuddyService{
+	
+	private BuddyRepository buddyrepository;
+	
+    @Autowired
+	public BuddyServiceImpl(BuddyRepository buddyrepository) {
+		super();
+		this.buddyrepository = buddyrepository;
+	}
+
+	@Override
+	public Buddy saveBuddy(Buddy buddy) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Buddy> getAllBuddies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Buddy getBuddyById(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Buddy updateBuddy(Buddy buddy, long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteBuddy(long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Buddy> getBuddiesByCompanyCity(String companyCity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Buddy> getBuddiesByCompanyName(String companyName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

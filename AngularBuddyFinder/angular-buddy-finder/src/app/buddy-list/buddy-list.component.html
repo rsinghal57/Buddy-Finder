@@ -1,0 +1,40 @@
+<div class="container">
+    <input class="form-control" type="text" name="companyCity" placeholder="Find Buddy based on Company City"
+    [(ngModel)]="searchCity" (ngModelChange)="searchByCity()">
+    <br>
+    <input class="form-control" type="text" name="companyName" placeholder="Find Buddy based on Company Name"
+    [(ngModel)]="searchName" (ngModelChange)="searchByName()">
+    <br>
+    <h2>Buddies Found:</h2>
+</div>
+
+<table class="table table-striped">
+    <thead>
+  <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email ID</th>
+      <th>Phone Number</th>
+      <th>Company City</th>
+      <th>Company Name</th>
+      <th>Company Address</th>
+      <th> Actions </th>
+  </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let buddy of buddies">
+       <td>{{buddy.firstName}}</td>
+       <td>{{buddy.lastName}}</td>
+       <td>{{buddy.email}}</td>
+       <td>{{buddy.phoneNumber}}</td>
+       <td>{{buddy.companyCity}}</td>
+       <td>{{buddy.companyName}}</td>
+       <td>{{buddy.companyAddress}}</td>
+       <td>
+        <button (click) = "updateBuddy(buddy.id)" class = "btn btn-info"> Update</button>
+        <button (click) = "deleteBuddy(buddy.id)" class = "btn btn-danger" style="margin-left: 0px"> Delete</button>
+    </td>
+    </tr>
+    </tbody>
+
+</table>
